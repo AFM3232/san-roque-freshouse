@@ -1025,8 +1025,13 @@ body.mode-slides #propuesta-a .warranty,
 body.mode-slides #propuesta-b .warranty,
 body.mode-slides #propuesta-a .sello-total,
 body.mode-slides #propuesta-b .sello-total,
-body.mode-slides #propuesta-a .prop-fotos-ref,
-body.mode-slides #propuesta-b .prop-fotos-ref{display:none!important}
+body.mode-slides #propuesta-b .prop-diagrama{display:none!important}
+/* Fotos referencia UPVC — compactas en slide mode (3 col, 2 filas) */
+body.mode-slides #propuesta-b .prop-fotos-ref{margin-top:0!important}
+body.mode-slides #propuesta-b .prop-fotos-ref .photo-cat-label{margin-bottom:.3rem!important;font-size:.5rem!important}
+body.mode-slides #propuesta-b .prop-fotos-ref .photo-grid{grid-template-columns:repeat(3,1fr)!important;gap:.3rem!important}
+body.mode-slides #propuesta-b .prop-fotos-ref .photo-item{aspect-ratio:4/3!important}
+body.mode-slides #propuesta-b .prop-col-right{justify-content:center!important}
 /* === EDIT MODE === */
 /* Desactivar pseudo-elementos que bloquean clics (::before con position:absolute cubre el contenido) */
 body.edit-mode main *::before,
@@ -1427,22 +1432,22 @@ img.lazy-img.loaded{background:none;animation:none}
       </div>
     </div>
 
-    <!-- Columna derecha: foto -->
-    <div class="prop-col-right" style="display:flex;align-items:center;justify-content:center">
-      <img src="media/san-roque-propuesta.jpg" alt="Propuesta cubierta San Roque" style="width:100%;height:100%;object-fit:cover;border-radius:12px;max-height:520px">
-    </div>
-  </div>
-
-  <!-- Fotos de referencia — sistema UPVC instalado -->
-  <div class="photo-category reveal prop-fotos-ref" style="margin-top:2rem">
-    <div class="photo-cat-label"><span>Referencias — sistema UPVC instalado</span></div>
-    <div class="photo-grid">
-      <div class="photo-item"><img data-src="media/sr-upvc-01.jpg" alt="Sistema UPVC — ref 01" decoding="async" class="lazy-img"><div class="photo-label">Ref 01</div></div>
-      <div class="photo-item"><img data-src="media/sr-upvc-02.jpg" alt="Sistema UPVC — ref 02" decoding="async" class="lazy-img"><div class="photo-label">Ref 02</div></div>
-      <div class="photo-item"><img data-src="media/sr-upvc-03.jpg" alt="Sistema UPVC — ref 03" decoding="async" class="lazy-img"><div class="photo-label">Ref 03</div></div>
-      <div class="photo-item"><img data-src="media/sr-upvc-04.jpg" alt="Sistema UPVC — ref 04" decoding="async" class="lazy-img"><div class="photo-label">Ref 04</div></div>
-      <div class="photo-item"><img data-src="media/sr-upvc-05.jpg" alt="Sistema UPVC — ref 05" decoding="async" class="lazy-img"><div class="photo-label">Ref 05</div></div>
-      <div class="photo-item"><img data-src="media/sr-upvc-06.jpg" alt="Sistema UPVC — ref 06" decoding="async" class="lazy-img"><div class="photo-label">Ref 06</div></div>
+    <!-- Columna derecha: diagrama (informe) + fotos referencia (slides + informe) -->
+    <div class="prop-col-right" style="display:flex;flex-direction:column;gap:.75rem">
+      <div class="prop-diagrama" style="display:flex;align-items:center;justify-content:center">
+        <img src="media/san-roque-propuesta.jpg" alt="Propuesta cubierta San Roque" style="width:100%;object-fit:cover;border-radius:12px;max-height:420px">
+      </div>
+      <div class="photo-category reveal prop-fotos-ref">
+        <div class="photo-cat-label"><span>Referencias — sistema UPVC instalado</span></div>
+        <div class="photo-grid">
+          <div class="photo-item"><img data-src="media/sr-upvc-01.jpg" alt="Sistema UPVC — ref 01" decoding="async" class="lazy-img"><div class="photo-label">Ref 01</div></div>
+          <div class="photo-item"><img data-src="media/sr-upvc-02.jpg" alt="Sistema UPVC — ref 02" decoding="async" class="lazy-img"><div class="photo-label">Ref 02</div></div>
+          <div class="photo-item"><img data-src="media/sr-upvc-03.jpg" alt="Sistema UPVC — ref 03" decoding="async" class="lazy-img"><div class="photo-label">Ref 03</div></div>
+          <div class="photo-item"><img data-src="media/sr-upvc-04.jpg" alt="Sistema UPVC — ref 04" decoding="async" class="lazy-img"><div class="photo-label">Ref 04</div></div>
+          <div class="photo-item"><img data-src="media/sr-upvc-05.jpg" alt="Sistema UPVC — ref 05" decoding="async" class="lazy-img"><div class="photo-label">Ref 05</div></div>
+          <div class="photo-item"><img data-src="media/sr-upvc-06.jpg" alt="Sistema UPVC — ref 06" decoding="async" class="lazy-img"><div class="photo-label">Ref 06</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
