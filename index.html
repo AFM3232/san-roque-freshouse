@@ -1022,7 +1022,11 @@ body.mode-slides #propuesta-b td{padding:.27rem .55rem!important}
 body.mode-slides #propuesta-a .callout,
 body.mode-slides #propuesta-b .callout,
 body.mode-slides #propuesta-a .warranty,
-body.mode-slides #propuesta-b .warranty{display:none!important}
+body.mode-slides #propuesta-b .warranty,
+body.mode-slides #propuesta-a .sello-total,
+body.mode-slides #propuesta-b .sello-total,
+body.mode-slides #propuesta-a .prop-fotos-ref,
+body.mode-slides #propuesta-b .prop-fotos-ref{display:none!important}
 /* === EDIT MODE === */
 /* Desactivar pseudo-elementos que bloquean clics (::before con position:absolute cubre el contenido) */
 body.edit-mode main *::before,
@@ -1398,7 +1402,7 @@ img.lazy-img.loaded{background:none;animation:none}
         <span><strong>Respaldo técnico:</strong> viabilidad estructural revisada con concepto de calculista. El bajo peso del sistema UPVC 2.5 mm sobre viguetas y omegas no compromete la estructura existente.</span>
       </div>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem;margin-top:1.25rem;padding:1.5rem 1rem;border-radius:14px;border:2.5px solid rgba(249,115,22,.6);background:rgba(249,115,22,.07);text-align:center">
+      <div class="sello-total" style="display:flex;flex-direction:column;align-items:center;gap:.75rem;margin-top:1.25rem;padding:1.5rem 1rem;border-radius:14px;border:2.5px solid rgba(249,115,22,.6);background:rgba(249,115,22,.07);text-align:center">
         <svg width="140" height="140" viewBox="0 0 72 72">
           <defs>
             <path id="arcT-s" d="M 5,36 A 31,31 0 0,1 67,36"/>
@@ -1426,6 +1430,19 @@ img.lazy-img.loaded{background:none;animation:none}
     <!-- Columna derecha: foto -->
     <div class="prop-col-right" style="display:flex;align-items:center;justify-content:center">
       <img src="media/san-roque-propuesta.jpg" alt="Propuesta cubierta San Roque" style="width:100%;height:100%;object-fit:cover;border-radius:12px;max-height:520px">
+    </div>
+  </div>
+
+  <!-- Fotos de referencia — sistema UPVC instalado -->
+  <div class="photo-category reveal prop-fotos-ref" style="margin-top:2rem">
+    <div class="photo-cat-label"><span>Referencias — sistema UPVC instalado</span></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img data-src="media/sr-upvc-01.jpg" alt="Sistema UPVC — ref 01" decoding="async" class="lazy-img"><div class="photo-label">Ref 01</div></div>
+      <div class="photo-item"><img data-src="media/sr-upvc-02.jpg" alt="Sistema UPVC — ref 02" decoding="async" class="lazy-img"><div class="photo-label">Ref 02</div></div>
+      <div class="photo-item"><img data-src="media/sr-upvc-03.jpg" alt="Sistema UPVC — ref 03" decoding="async" class="lazy-img"><div class="photo-label">Ref 03</div></div>
+      <div class="photo-item"><img data-src="media/sr-upvc-04.jpg" alt="Sistema UPVC — ref 04" decoding="async" class="lazy-img"><div class="photo-label">Ref 04</div></div>
+      <div class="photo-item"><img data-src="media/sr-upvc-05.jpg" alt="Sistema UPVC — ref 05" decoding="async" class="lazy-img"><div class="photo-label">Ref 05</div></div>
+      <div class="photo-item"><img data-src="media/sr-upvc-06.jpg" alt="Sistema UPVC — ref 06" decoding="async" class="lazy-img"><div class="photo-label">Ref 06</div></div>
     </div>
   </div>
 </section>
